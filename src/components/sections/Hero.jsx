@@ -12,6 +12,7 @@ import {
   headTextAnimation,
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
+import '../../index.css';
 
 const HeroContainer = styled.div`
   display: flex;
@@ -234,7 +235,7 @@ const Hero = () => {
             <HeroLeftContainer>
               <motion.div {...headTextAnimation}>
                 <Title>
-                  Hi, I am <br /> {Bio.name}
+                  <span className="spaning">Hi, I am <br /> </span>{Bio.name}
                 </Title>
                 <TextLoop>
                   I am a
