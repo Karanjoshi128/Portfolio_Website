@@ -6,6 +6,7 @@ import Hisaab from "../images/Hisaab.png";
 import jsextension from "../images/Js-extension.jpg";
 import RlTicTactoe from "../images/Rl-Tic-Tac-Toe.png";
 import Lynkie from "../images/Lynkie.png";
+import Saaransh from "../images/Saaransh.png";
 
 
 
@@ -235,40 +236,39 @@ export const education = [
 export const projects = [
   {
     id: 11,
-    title: "Js Extensions",
+    title: "Saaransh AI",
     description:
-      "This project is a collection of JavaScript-based browser extensions designed to enhance user productivity, provide educational insights, and offer location-based services. Each extension serves a unique purpose, ranging from managing browser history and bookmarks to demonstrating keylogging techniques, displaying user locations on interactive maps, and organizing social media links. Together, these projects showcase the versatility of JavaScript in creating practical and innovative browser tools.",
+      "Saaransh is a modern web application that leverages AI to generate concise summaries from lengthy PDF documents. Built with the MERN stack and advanced transformer models running locally, Saaransh allows users to upload PDFs, instantly receive high-quality summaries, and manage their results securely. The platform features a sleek, responsive UI, dark/light mode, and robust database integration, making it an ideal tool for students, researchers, and professionals who need to quickly extract insights from large documents.",
     image:
-      jsextension,
-    tags: ["html5" , "css3" , "javascript"],
+      Saaransh,
+    tags: ["Nextjs", "threejs","tailwind", "neonDb" ,"Langchain" , "huggingFace" , "openAI" ,"Gemini"],
     category: "web app",
-    github: "https://github.com/Karanjoshi128/js-extension",
-    // webapp: "https://decisionhub.netlify.app/",
+    github: "https://github.com/Karanjoshi128/saaransh",
+    webapp: "https://saaransh-git-master-karan-joshis-projects.vercel.app/",
   },
   {
     id: 9,
-    title: "Hisaab-Frontend",
+    title: "Hisaab",
     description:
-      "Hisaab Frontend is a Node.js-based backend application for managing users, transactions, and balances. It is built using Express.js, MongoDB, and Mongoose, and supports user authentication and transaction management. It also includes features for managing user roles and permissions, as well as transaction history and balance tracking. The application is designed to be scalable and efficient, making it suitable for use in a variety of applications.",
+      "Hisaab is a Node.js-based backend application for managing users, transactions, and balances. It is built using Express.js, MongoDB, and Mongoose, and supports user authentication and transaction management. It also includes features for managing user roles and permissions, as well as transaction history and balance tracking. The application is designed to be scalable and efficient, making it suitable for use in a variety of applications.",
     image:
       Hisaab,
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     github: "https://github.com/Karanjoshi128/Hisaab-Frontend",
-    // webapp: "https://trackify-management.netlify.app/",
+    webapp: "https://hisaab-frontend.vercel.app/",
   },
   {
     id: 0,
-    title: "Hisaab-Backend",
+    title: "Js Extensions",
     description:
-      "Hisaab Backend is a Node.js-based backend application for managing users, transactions, and balances. It is built using Express.js, MongoDB, and Mongoose, and supports user authentication and transaction management. It also includes features for managing user roles and permissions, as well as transaction history and balance tracking. The application is designed to be scalable and efficient, making it suitable for use in a variety of applications.",
-    image:
-      Hisaab,
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+      "This project is a collection of JavaScript-based browser extensions designed to enhance user productivity, provide educational insights, and offer location-based services. Each extension serves a unique purpose, ranging from managing browser history and bookmarks to demonstrating keylogging techniques, displaying user locations on interactive maps, and organizing social media links. Together, these projects showcase the versatility of JavaScript in creating practical and innovative browser tools.",
+      image:
+      jsextension,
+    tags: ["html5" , "css3" , "javascript"],
     category: "web app",
-    github: "https://github.com/Karanjoshi128/Hisaab-Backend",
-    // webapp: "https://podstream.netlify.app/",
-    
+    github: "https://github.com/Karanjoshi128/js-extension",
+    // webapp: "https://decisionhub.netlify.app/",
   },
   {
     id: 1,
@@ -313,7 +313,7 @@ export const projects = [
     tags: ["react", "socket.io", "node.js", "express"],
     category: "web app",
     github: "https://github.com/Karanjoshi128/Tic_Tac_Toe_Socket.io",
-    // webapp: "https://brain-tumor.netlify.app/",
+    webapp: "https://tic-tac-toe-socket-io.vercel.app/",
   },
   {
     id: 3,
@@ -331,7 +331,7 @@ export const projects = [
     ],
     category: "web app",
     github: "https://github.com/Karanjoshi128/LYNKIE",
-    // webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
+    webapp: "https://lynkie.vercel.app/",
   },
 
 ];
