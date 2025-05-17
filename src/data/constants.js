@@ -7,6 +7,7 @@ import jsextension from "../images/Js-extension.jpg";
 import RlTicTactoe from "../images/Rl-Tic-Tac-Toe.png";
 import Lynkie from "../images/Lynkie.png";
 import Saaransh from "../images/Saaransh.png";
+import typescript from "../images/typescript.png";
 
 
 
@@ -47,9 +48,9 @@ export const skills = [
           "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=",
       },
       {
-        name: "Angular Js",
+        name: "Typescript",
         image:
-          "https://camo.githubusercontent.com/8886130b3d8aba95dbdd7c4f9a41029606424cc06d1873c1ced87dd55a222fef/68747470733a2f2f616e67756c61722e696f2f6173736574732f696d616765732f6c6f676f732f616e67756c61722f616e67756c61722e737667",
+          typescript,
       },
       {
         name: "HTML",
@@ -126,37 +127,6 @@ export const skills = [
       {
         name: "Firebase",
         image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      },
-    ],
-  },
-  {
-    title: "Machine Learning",
-    skills: [
-      {
-        name: "Python",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-      },
-      {
-        name: "Tenserflow",
-        image:
-          "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
-      },
-      {
-        name: "Keras",
-        image:
-          "https://miro.medium.com/v2/resize:fit:600/1*DKu_54iqz6C-p6ndo7rO3g.png",
-      },
-      {
-        name: "Jupyter",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png",
-      },
-      
-      {
-        name: "Sk Learn Kit",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png",
       },
     ],
   },
