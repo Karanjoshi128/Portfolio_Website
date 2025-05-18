@@ -2,7 +2,7 @@ import Abesitlogo from "../images/Abesit_logo.png";
 import upslogo from "../images/Ups_logo.png";
 
 import CogniLink from "../images/CogniLink.jpg";
-import Hisaab from "../images/Hisaab.png";
+import Hisaab2 from "../images/Hisaab2.png";
 import jsextension from "../images/Js-extension.jpg";
 import RlTicTactoe from "../images/Rl-Tic-Tac-Toe.png";
 import Lynkie from "../images/Lynkie.png";
@@ -221,7 +221,7 @@ export const projects = [
     description:
       "Hisaab is a Node.js-based backend application for managing users, transactions, and balances. It is built using Express.js, MongoDB, and Mongoose, and supports user authentication and transaction management. It also includes features for managing user roles and permissions, as well as transaction history and balance tracking. The application is designed to be scalable and efficient, making it suitable for use in a variety of applications.",
     image:
-      Hisaab,
+      Hisaab2,
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     github: "https://github.com/Karanjoshi128/Hisaab-Frontend",
