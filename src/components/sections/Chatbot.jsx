@@ -1,0 +1,305 @@
+import { useState, useEffect, useRef } from "react";
+import { MessageSquare, X } from "lucide-react";
+
+const Chatbot = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [messages, setMessages] = useState([]);
+    const [inputValue, setInputValue] = useState("");
+    const [isTyping, setIsTyping] = useState(false);
+    const messagesEndRef = useRef(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages]);
+
+    useEffect(() => {
+        if (isOpen && messages.length === 0) {
+            // Initial welcome message
+            addBotMessage(
+                "Hello! I'm here to help you with questions about our taxation and accounting services. How can I assist you today?"
+            );
+        }
+    }, [isOpen, messages.length]);
+
+    const addBotMessage = (text) => {
+        const message = {
+            id: Date.now().toString(),
+            text,
+            isBot: true,
+            timestamp: new Date(),
+        };
+        setMessages((prev) => [...prev, message]);
+    };
+
+    const addUserMessage = (text) => {
+        const message = {
+            id: Date.now().toString(),
+            text,
+            isBot: false,
+            timestamp: new Date(),
+        };
+        setMessages((prev) => [...prev, message]);
+    };
+
+    const getBotResponse = (userInput) => {
+        const input = userInput.toLowerCase();
+
+        // Simple rule-based responses
+        if (input.includes("bio")) {
+            return `Here's the bio for Karan Joshi:
+
+Name: Karan Joshi
+Roles: Full Stack Developer, Programmer
+
+Description:
+I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.
+
+Links:
+GitHub: https://github.com/Karanjoshi128
+Resume: https://ljsz9ukogn.ufs.sh/f/KX1pzsIV6K2s3aHkZ09btZpIVN1mXwCxQGPKcO2i9zynAk0e
+LinkedIn: https://www.linkedin.com/in/karan-joshi-a70740271/
+Twitter: https://twitter.com/KaranJoshi128
+Instagram: https://www.instagram.com/nasty0970/
+`;
+        }
+
+        if (input.includes("skills")) {
+            return `Here are Karan Joshi's skills:
+
+Frontend:
+- React Js
+- Redux
+- Next Js
+- Typescript
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- ShadCn
+
+Backend:
+- Node Js
+- Express Js
+- Graph Ql
+- Python
+- Flask
+- Django
+- MySQL
+- Postgresql
+- MongoDB
+- Firebase
+
+Others:
+- Git
+- GitHub
+- Vercel
+- VS Code
+- Postman
+- Figma
+`;
+        }
+
+        if (input.includes("education")) {
+            return `Karan Joshi's education details:
+
+1. ABES Institute of Technology, Ghaziabad
+   - Period: Oct 2022 - Oct 2026
+   - Degree: Bachelor of Technology - BTech, Computer Science and Engineering
+   - Grade: 7.7 CGPA
+   - Description: I am currently pursuing a Bachelor's degree in Computer Science and Engineering at ABES Institute of Technology, Ghaziabad. I have completed 5 semesters and have a CGPA of 7.7. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club, where I am learning and working on exciting projects with a team of talented developers.
+
+2. Uttarakhand Public School, Noida Sector-56
+   - Period: Aug 2020 - Aug 2022
+   - Degree: ISC(XII), Science with Computer
+   - Grade: 91.6%
+   - Description: I completed my class 12 high school education at Methodist School, Dankuni, where I studied Science with Computer Science.
+
+3. Uttarakhand Public School, Noida Sector-56
+   - Period: Aug 2018 - Aug 2020
+   - Degree: CBSE(X), Science with Computer
+   - Grade: 92.3%
+   - Description: I completed my class 10 education at Uttarakhand public School, Noida Sector-56, where I studied Science with Computer Application.
+`;
+        }
+
+        if (input.includes("projects")) {
+            return `Karan Joshi's projects:
+
+1. Saaransh AI
+   - Description: Saaransh is a modern web application that leverages AI to generate concise summaries from lengthy PDF documents. Built with the MERN stack and advanced transformer models running locally, Saaransh allows users to upload PDFs, instantly receive high-quality summaries, and manage their results securely. The platform features a sleek, responsive UI, dark/light mode, and robust database integration, making it an ideal tool for students, researchers, and professionals who need to quickly extract insights from large documents.
+   - Tags: Nextjs, threejs, tailwind, neonDb, Langchain, huggingFace, openAI, Gemini
+   - Category: web app
+   - GitHub: https://github.com/Karanjoshi128/saaransh
+   - Webapp: https://saaransh-git-master-karan-joshis-projects.vercel.app/
+
+2. Hisaab
+   - Description: Hisaab is a Node.js-based backend application for managing users, transactions, and balances. It is built using Express.js, MongoDB, and Mongoose, and supports user authentication and transaction management. It also includes features for managing user roles and permissions, as well as transaction history and balance tracking. The application is designed to be scalable and efficient, making it suitable for use in a variety of applications.
+   - Tags: React Js, MongoDb, Node Js, Express Js, Redux
+   - Category: web app
+   - GitHub: https://github.com/Karanjoshi128/Hisaab-Frontend
+   - Webapp: https://hisaab-frontend.vercel.app/
+
+3. Js Extensions
+   - Description: This project is a collection of JavaScript-based browser extensions designed to enhance user productivity, provide educational insights, and offer location-based services. Each extension serves a unique purpose, ranging from managing browser history and bookmarks to demonstrating keylogging techniques, displaying user locations on interactive maps, and organizing social media links. Together, these projects showcase the versatility of JavaScript in creating practical and innovative browser tools.
+   - Tags: html5, css3, javascript
+   - Category: web app
+   - GitHub: https://github.com/Karanjoshi128/js-extension
+
+4. CogniLink
+   - Description: CogniLink addresses the daily struggles of individuals with limited mobility, such as difficulty in performing routine tasks independently. It fills the gap left by traditional social platforms, which often overlook the unique needs of differently abled users. By fostering an inclusive, supportive community, CogniLink combats isolation, especially worsened during the pandemic, and empowers users through shared life hacks, small wins, and meaningful peer connections.
+   - Tags: React Js, MongoDb, Node Js, Express Js, Redux, NodeMailer
+   - Category: web app
+   - GitHub: https://github.com/Karanjoshi128/Communify_Hack_CBS
+   - Members:
+      • Karan Joshi
+        - LinkedIn: https://www.linkedin.com/in/karan-joshi-a70740271/
+        - GitHub: https://github.com/Karanjoshi128
+      • Prateek Tiwari
+        - LinkedIn: https://www.linkedin.com/in/prateek-tiwari-1124b7203/
+        - GitHub: https://github.com/prateek-tiwarii
+
+5. Real time Tic-Tac-Toe
+   - Description: This project is a simple Node.js application using Socket.IO to manage real-time, bidirectional communication between web clients and servers. The application allows up to two users to connect simultaneously and exchange messages. If a third user attempts to connect, they will be notified that the room is full and will be disconnected.
+   - Tags: react, socket.io, node.js, express
+   - Category: web app
+   - GitHub: https://github.com/Karanjoshi128/Tic_Tac_Toe_Socket.io
+   - Webapp: https://tic-tac-toe-socket-io.vercel.app/
+
+6. Lynkie
+   - Description: LYNKIE is a React-based web application designed to provide a visually appealing and interactive interface for managing and sharing social media links. The application allows users to copy social media profile URLs to their clipboard with a single click and visit the URLs with a double click. It is built using modern web technologies like React, Tailwind CSS, and Vite for fast development and performance. The project is styled with Tailwind CSS and features a responsive design to ensure compatibility across devices.
+   - Tags: React Js, Tailwind CSS, Vite, Node Js, Express Js
+   - Category: web app
+   - GitHub: https://github.com/Karanjoshi128/LYNKIE
+   - Webapp: https://lynkie.vercel.app/
+`;
+        }
+
+        // Default response
+        return "I understand you're asking about our services. We specialize in Accounting, GST, Income Tax, TDS, ESI/EPF, Trademark, MSME/Udyam registration, and Financial Case Settlements. Could you please be more specific about which service you'd like to know about? I'm here to provide detailed information about any of these areas.";
+    };
+
+    const handleSendMessage = async () => {
+        if (!inputValue.trim()) return;
+
+        const userMessage = inputValue.trim();
+        addUserMessage(userMessage);
+        setInputValue("");
+        setIsTyping(true);
+
+        // Simulate typing delay
+        setTimeout(() => {
+            const response = getBotResponse(userMessage);
+            addBotMessage(response);
+            setIsTyping(false);
+        }, 1000);
+    };
+
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            handleSendMessage();
+        }
+    };
+
+    return (
+        <>
+            {/* Floating Chat Button */}
+            {!isOpen && (
+                <button
+                    onClick={() => setIsOpen(true)}
+                    className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg z-50 animate-pulse flex items-center justify-center"
+                >
+                    <MessageSquare className="h-6 w-6 text-white" />
+                </button>
+            )}
+
+            {/* Chat Window */}
+            {isOpen && (
+                <div className="fixed bottom-8 right-6 w-[30rem] h-[35rem] shadow-2xl z-50 animate-scale-in rounded-lg border bg-white flex flex-col">
+                    <div className="bg-blue-600 text-white rounded-t-lg flex flex-row items-center justify-between p-4">
+                        <div>
+                            <div className="text-lg font-bold">Financial Assistant</div>
+                            <p className="text-blue-100 text-sm">
+                                Ask me anything about our services
+                            </p>
+                        </div>
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="text-white hover:bg-blue-700 p-1 rounded"
+                        >
+                            <X className="h-4 w-4" />
+                        </button>
+                    </div>
+
+                    <div className="p-0 flex flex-col h-[30rem] flex-1">
+                        {/* Messages Area */}
+                        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+                            {messages.map((message) => (
+                                <div
+                                    key={message.id}
+                                    className={`flex ${message.isBot ? "justify-start" : "justify-end"}`}
+                                >
+                                    <div
+                                        className={`max-w-xs p-3 rounded-lg ${message.isBot
+                                            ? "bg-gray-100 text-gray-800"
+                                            : "bg-blue-600 text-white"
+                                            }`}
+                                    >
+                                        {message.text.split("\n").map((line, idx) => (
+                                            <p key={idx} className="text-sm">
+                                                {line}
+                                            </p>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+
+                            {isTyping && (
+                                <div className="flex justify-start">
+                                    <div className="bg-gray-100 p-3 rounded-lg">
+                                        <div className="flex space-x-1">
+                                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                                            <div
+                                                className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                                                style={{ animationDelay: "0.1s" }}
+                                            ></div>
+                                            <div
+                                                className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                                                style={{ animationDelay: "0.2s" }}
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            <div ref={messagesEndRef} />
+                        </div>
+
+                        {/* Input Area */}
+                        <div className="border-t p-4 flex space-x-2">
+                            <input
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                onKeyPress={handleKeyPress}
+                                placeholder="Type your question..."
+                                className="flex-1 h-10 rounded-md border border-input bg-background px-3 py-2 text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                            />
+                            <button
+                                onClick={handleSendMessage}
+                                disabled={!inputValue.trim() || isTyping}
+                                className="bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
+                            >
+                                Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
+    );
+};
+
+export default Chatbot;
