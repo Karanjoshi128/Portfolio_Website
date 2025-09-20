@@ -216,7 +216,7 @@ export const education = [
     school: "ABES Institute of Technology, Ghaziabad",
     date: "oct 2022 - Oct 2026",
     grade: "7.7 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at ABES Institute of Technology, Ghaziabad. I have completed 5 semesters and have a CGPA of 7.7. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club, where I am learning and working on exciting projects with a team of talented developers.",
+    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at ABES Institute of Technology, Ghaziabad. I have completed 6 semesters and have a CGPA of 7.7. I have taken courses in Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, and Computer Networks, among others. I am also a member of the Google Developers Student Club, where I am learning and working on exciting projects with a team of talented developers.",
     degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
   },
   {
