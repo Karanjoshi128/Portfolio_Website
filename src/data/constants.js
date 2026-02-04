@@ -21,7 +21,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/Karanjoshi128",
   resume:
-    "https://ljsz9ukogn.ufs.sh/f/KX1pzsIV6K2s1vL7YD9spA3gzbcDu8QqaZtwysOShi7j6M5T",
+    "https://drive.google.com/file/d/136oZ9JNnGDTllv0TF57ccNi9wEGc_yll/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/karan-joshi-a70740271/",
   twitter: "https://twitter.com/KaranJoshi128",
   insta: "https://www.instagram.com/nasty0970/",
